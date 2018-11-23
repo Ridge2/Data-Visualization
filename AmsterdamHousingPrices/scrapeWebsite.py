@@ -52,11 +52,11 @@ count = 0
 restartCount = 0
 csvFile = open('../AmsterdamHousingPrices/data.csv', 'w')
 with csvFile:
-    myFields = ['Special Feature', 'Apartment Name', 'Apartment Price', 'Rooms']
+    myFields = ['Special Feature', 'Apartment Location', 'Apartment Price', 'Room Specs']
     writer = csv.DictWriter(csvFile, fieldnames=myFields)
     writer.writeheader()
     while(count < 24):
-        writer.writerow({'Special Feature' : apt_feat[count], 'Apartment Name' : apt_name[count], 'Apartment Price' : apt_price[count],'Rooms' : apt_room[count]})
+        writer.writerow({'Special Feature' : apt_feat[count], 'Apartment Location' : apt_name[count], 'Apartment Price' : apt_price[count],'Room Specs' : apt_room[count]})
         count = count + 1
         restartCount = restartCount + 1
         if(restartCount == 4):
